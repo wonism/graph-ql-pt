@@ -1,0 +1,44 @@
+.none {
+  display: none; }
+
+li {
+  list-style: none; }
+
+* {
+  text-align: center; }
+
+pre {
+  text-align: left; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: #ccc; }
+  .header h1 {
+    margin: 0;
+    padding: 10px 0;
+    line-height: 75px; }
+
+.introduce main {
+  padding: 95px 0 0;
+  font-size: 20px; }
+
+p {
+  margin: 0;
+  line-height: 2em;
+  font-size: 20px; }
+
+blockquote {
+  margin: 0;
+  padding: 0 20px;
+  border-color: #ccc;
+  font-size: 20px; }
+
+pre, ol, ul {
+  font-size: 20px; }
+
+img {
+  width: 50%; }
