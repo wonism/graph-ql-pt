@@ -16,6 +16,8 @@
 !/log/.keep
 /tmp
 
+config/database.yml
+
 node_modules
 bower_components
 *.log

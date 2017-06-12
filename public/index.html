@@ -11,6 +11,7 @@
       <h1>Graph QL</h1>
     </nav>
     <main class="steps">
+      <hr />
       <section class="slide">
         <h1>What is Graph QL?</h1>
         <ul>
@@ -19,6 +20,7 @@
           <li>Present a new API paradigm</li>
         </ul>
       </section>
+      <hr />
       <section class="slide">
         <h1>Approch</h1>
         <ul>
@@ -26,6 +28,7 @@
           <li>Get datas by sending a query to the server</li>
         </ul>
       </section>
+      <hr />
       <section class="slide">
         <h1>A case in using RESTful API</h1>
         <h2>Endpoints</h2>
@@ -37,53 +40,56 @@
         <p>
           <pre>// /v1.users<br />{  <br />  "user": {<br />     "id": 10,<br />     "name": "John Doe",<br />     "nickname": "Johnny",<br />     "age": 23,<br />     "avatar_url": "/avatar/10.jpg"  <br />  } <br />}</pre>
         </p>
+        <hr />
         <h2>Front-end developer's position</h2>
         <p>
-          <blockquote>"Why we should send 2 request and combine resuilts for desplaying newsfeed."<br />"Please Put <b>user</b> as the <b>author</b>'s attribute of <b>post</b>."</blockquote>
+          <blockquote>"Why we should send 2 request and combine results<br />for desplaying newsfeed."<br />"Please Put <b>user</b> as the <b>author</b>'s attribute of <b>post</b>."</blockquote>
         </p>
+        <hr />
         <h2>Back-end developer's way</h2>
         <p>
-          <blockquote>1. "Here is an ad-hoc endpoint that combined results.(It's not RESTful anymore)"</blockquote>
+          <blockquote>1. "Here is an ad-hoc endpoint that combined results."<br />(It's not RESTful anymore)</blockquote>
           <blockquote>2. "No! It's a perfect RESTful API! Develop this way!"</blockquote>
         </p>
+        <hr />
         <h2>If developer choose 1?</h2>
         <ol>
           <li>There are so many endpoints to maintain.</li>
-          <li>Developer would make many custom endpoints and API documents.</li>
+          <li>Developer would make<br />many custom endpoints and API documents.</li>
         </ol>
+        <hr />
         <h2>After this project..</h2>
         <p>
           <span>Project manager says..</span>
-          <blockquote>"Remove <b>view counts</b>. The figure is too low. So, It will be negative for users.</blockquote>
+          <blockquote>"Remove <b>view counts</b>. The figure is too low.<br />So, It will be negative for users."</blockquote>
         </p>
+        <hr />
         <h2>Back-end developer make a new API</h2>
         <p>
           <pre>// /v2/posts<br />{  <br />  "posts": [  {  <br />    "id": 1,<br />    "title": "Hello world!",<br />    "author": 10,<br />    "likedCount": 3,<br />    "likedBy": [1, 3],<br />  }] <br />}</pre>
         </p>
+        <hr />
         <h2>Front-end developer's position</h2>
-        <p>1. Front-end developer use existing endpoint. Just remove viewCount from result of <b>/v1/posts</b>. (It is over fetched!)</p>
+        <p>1. Front-end developer use existing endpoint.<br />Just remove viewCount from result of <b>/v1/posts</b>.<br />(It is over fetched!)</p>
         <p>
           <pre>fetch('/v1/posts')<br />  .then(() => {<br />    /* ... do something... */<br />  })</pre>
         </p>
-        <p>2. Front-end developer make browser to send request to new endpoint</p>
+        <p>2. Front-end developer make<br />browser to send request to new endpoint</p>
         <p>
           <pre>fetch('/v2/posts')<br />  .then(() => {<br />    /* ... do something... */<br />  })</pre>
         </p>
+        <hr />
         <h2>User age! - New feature for application</h2>
         <p>Back-end developer has to..</p>
-        <ol>
-          <li>DB table migration</li>
-          <li>Change query for fetching datas</li>
-          <li>Add <b>age</b> property into result</li>
-          <li>API versioning</li>
-          <li>Do unit test, rewrite e2e test code</li>
-          <li>Test with <b>curl</b>, <b>postman</b> or somethings</li>
-          <li>Deploy to test server and Do test on test server</li>
-        </ol>
+        <p>
+          <pre>1. DB table migration<br />2. Change query for fetching datas<br />3. Add age property into result<br />4. API versioning<br />5. Do unit test, rewrite e2e test code<br />6. Test with curl, postman or somethings<br />7. Deploy to test server and Do test on test server</pre>
+        </p>
       </section>
+      <hr />
       <section class="slide">
         <h1>It is pain to FE & BE developers!</h1>
       </section>
+      <hr />
       <section class="slide">
         <h1>If developers use Graph QL?</h1>
         <h2>Back-end developer's codes</h2>
@@ -93,17 +99,41 @@
         </p>
         <h2>Back-end developer's codes</h2>
       </section>
+      <hr />
+      <section class="slide">
+        <h1>Reference</h1>
+        <p><a href="https://jaewonism.com/posts/40" target="_blank">https://jaewonism.com</a></p>
+      </section>
+      <hr />
+      <section class="slide">
+        <button class="btn btn-primary" id="go">Go to example</button>
+      </section>
+      <hr />
     </main>
   </section>
-  <section class="none">
+  <section class="example none">
     <section>
-    </section>
-    <section>
-      <button class="btn btn-primary" id="submit">Submit</button>
-    </section>
-    <section id="show-design">
-      <pre id="posts-v1">{  <br />  "posts": [  {  <br />    "id": 1,<br />    "title": "Hello world!",<br />    "author": 10,<br />    "viewCount": 23,<br />    "likedCount": 3,<br />    "likedBy": [1, 3],<br />  }] <br />}</pre>
-      <pre id="users-v1">{  <br />  "user": {<br />     "id": 10,<br />     "name": "John Doe",<br />     "nickname": "Johnny",<br />     "age": 23,<br />     "avatar_url": "/avatar/10.jpg"  <br />  } <br />}</pre>
+      <p>Create model</p>
+      <p><pre>$ rails generate model User email:string <br />$ rake db:migrate<br />$ rails c<br />> User.create(email: "user1@test.com")</pre></p>
+      <p>Install Graph QL</p>
+      <p><pre>gem 'graphql'<br />gem 'graphiql-rails'<br />gem 'graphql-relay'</pre></p>
+      <p>app/controllers/graphql_controller.rb</p>
+      <p><pre>class GraphqlController < ApplicationController<br />  skip_before_filter :verify_authenticity_token<br /><br />  def query<br />    variables = params[:variables]<br />    variables = JSON.parse(variables) if variables && variables.is_a?(String)<br /><br />    result_hash = Schema.execute(params[:query], variables: variables)<br />    render json: result_hash<br />  end<br />end</pre></p>
+      <p>config/routes.rb</p>
+      <p><pre>Rails.application.routes.draw do<br />  ...<br />  post '/graphql', to: 'graphql#query'<br />  mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql" if Rails.env.development?<br />  ...<br />end</pre></p>
+      <p>app/models/schema.rb</p>
+      <p><pre>UserType = GraphQL::ObjectType.define do<br />  name 'User'<br />  description '...'<br /><br />  field :id, !types.String<br />  field :email, !types.String<br />end<br /><br />QueryRoot = GraphQL::ObjectType.define do<br />  name 'Query'<br />  description '...'<br /><br />  field :user do<br />    type UserType<br />    argument :id, !types.String<br />    resolve -> (root, args, ctx) {<br />      User.find(args[:id])<br />    }<br />  end<br />end<br /><br />Schema = GraphQL::Schema.new(<br />  query: QueryRoot<br />)</pre></p>
+      <p>Front-end codes</p>
+      <p><pre>const formData = new FormData();<br />const query = `{<br />  user(id:"1") {<br />    email<br />  }<br />}`;<br />formData.append('query', query);<br /><br />fetch('graphql', {<br />  method: 'POST',<br />  body: formData,<br />});</pre></p>
+      <button class="btn btn-primary" id="submit-1">Submit - 1</button>
+      <hr />
+      <p>Add age into Users table</p>
+      <p><pre>class AddAgeToUsers < ActiveRecord::Migration<br />  def change<br />    add_column :users, :age, :int, :default => 0<br />  end<br />end</pre></p>
+      <p>app/models/schema.rb</p>
+      <p><pre>UserType = GraphQL::ObjectType.define do<br />  name 'User'<br />  description '...'<br /><br />  field :id, !types.String<br />  field :email, !types.String<br />  <b>field :age, !types.Int</b><br />end<br /><br />QueryRoot = GraphQL::ObjectType.define do<br />  name 'Query'<br />  description '...'<br /><br />  field :user do<br />    type UserType<br />    argument :id, !types.String<br />    resolve -> (root, args, ctx) {<br />      User.find(args[:id])<br />    }<br />  end<br />end<br /><br />Schema = GraphQL::Schema.new(<br />  query: QueryRoot<br />)</pre></p>
+      <p>Front-end codes</p>
+      <p><pre>const formData = new FormData();<br />const query = `{<br />  user(id:"1") {<br />    email,<br />    <b>age</b><br />  }<br />}`;<br />formData.append('query', query);<br /><br />fetch('graphql', {<br />  method: 'POST',<br />  body: formData,<br />});</pre></p>
+      <button class="btn btn-primary" id="submit-2">Submit - 2</button>
     </section>
   </section>
   <script type="text/javascript" src="/bundle.js"></script>
