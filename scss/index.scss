@@ -2,8 +2,20 @@
   display: none;
 }
 
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
 li {
   list-style: none;
+}
+
+hr {
+  margin: 5em 0;
 }
 
 * {
@@ -24,31 +36,34 @@ pre {
   h1 {
     margin: 0;
     padding: 10px 0;
-    line-height: 75px;
   }
 }
 
 .introduce {
   main {
-    padding: 95px 0 0;
-    font-size: 20px;
+    font-size: 40px;
   }
 }
 
 p {
   margin: 0;
-  line-height: 2em;
-  font-size: 20px;
+  // line-height: 2em;
+  font-size: 40px;
 }
 
 blockquote {
   margin: 0;
   padding: 0 20px;
   border-color: #ccc;
-  font-size: 20px;
+  font-size: 40px;
 }
 
-pre, ol, ul {
+ol, ul {
+  font-size: 40px;
+}
+
+pre {
+  margin: 1em 2em 2em;
   font-size: 20px;
 }
 
