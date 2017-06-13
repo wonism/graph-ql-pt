@@ -16,11 +16,16 @@ $(document).ready(() => {
         user(id:"1") {
           email
         }
-      }` : `
+      }` : id === '2' ? `
       {
         user(id: "1") {
           email,
           age
+        }
+      }` : `
+      {
+        user(id:"1") {
+          email
         }
       }`;
 

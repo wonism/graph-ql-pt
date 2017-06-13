@@ -134,6 +134,10 @@
       <p>Front-end codes</p>
       <p><pre>const formData = new FormData();<br />const query = `{<br />  user(id:"1") {<br />    email,<br />    <b>age</b><br />  }<br />}`;<br />formData.append('query', query);<br /><br />fetch('graphql', {<br />  method: 'POST',<br />  body: formData,<br />});</pre></p>
       <button class="btn btn-primary" id="submit-2">Submit - 2</button>
+      <hr />
+      <p>Front-end codes when age is removed</p>
+      <p><pre>const formData = new FormData();<br />const query = `{<br />  user(id:"1") {<br />    email<br />  }<br />}`;<br />formData.append('query', query);<br /><br />fetch('graphql', {<br />  method: 'POST',<br />  body: formData,<br />});</pre></p>
+      <button class="btn btn-primary" id="submit-1">Submit - 1</button>
     </section>
   </section>
   <script type="text/javascript" src="/bundle.js"></script>

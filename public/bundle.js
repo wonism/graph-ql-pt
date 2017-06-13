@@ -10353,7 +10353,7 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
     var target = e.target;
     var id = target.id.replace(/\D/g, '');
     var formData = new FormData();
-    var query = id === '1' ? '\n      {\n        user(id:"1") {\n          email\n        }\n      }' : '\n      {\n        user(id: "1") {\n          email,\n          age\n        }\n      }';
+    var query = id === '1' ? '\n      {\n        user(id:"1") {\n          email\n        }\n      }' : id === '2' ? '\n      {\n        user(id: "1") {\n          email,\n          age\n        }\n      }' : '\n      {\n        user(id:"1") {\n          email\n        }\n      }';
 
     formData.append('query', query);
 
