@@ -10348,7 +10348,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('body').on('click', '#go', function () {
     __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.introduce').addClass('none');
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.example').removeClass('none');
+    setTimeout(function () {
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.example').removeClass('none');
+    }, 0);
   }).on('click', '#submit-1, #submit-2', function (e) {
     var target = e.target;
     var id = target.id.replace(/\D/g, '');

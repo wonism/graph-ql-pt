@@ -5,7 +5,9 @@ $(document).ready(() => {
   $('body')
     .on('click', '#go', () => {
       $('.introduce').addClass('none');
-      $('.example').removeClass('none');
+      setTimeout(() => {
+        $('.example').removeClass('none');
+      }, 0);
     })
     .on('click', '#submit-1, #submit-2', (e) => {
       const target = e.target;
